@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rose-50:  hsl(20, 50%, 98%);
+  --color-rose-100: hsl(20, 54%, 94%);
+  --color-rose-300: hsl(14, 25%, 72%);
+  --color-rose-400: hsl(7, 54%, 42%);
+  --color-rose-500: hsl(12, 20%, 44%);
+  --color-rose-900: hsl(14, 65%, 9%);
+
+  --color-red:      hsl(14, 86%, 42%);
+  --color-green:    hsl(159, 69%, 38%);
+
+  --font-sans: 'Red Hat Text', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--color-rose-50);
+    color: var(--color-rose-900);
+  }
+
+  /* Hover & focus states */
+button:focus-visible,
+button:hover {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+/* Product card hover */
+div.bg-white:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Quantity buttons hover/focus */
+button[aria-label="Increase quantity"]:hover,
+button[aria-label="Decrease quantity"]:hover,
+button[aria-label="Increase quantity"]:focus-visible,
+button[aria-label="Decrease quantity"]:focus-visible {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* Prevent layout shift from scrollbar */
+
+/* Remove scrollbar forcing – we'll handle shift in JS if needed */
+html {
+  scroll-behavior: smooth;   /* nice to have, optional */
+}
+
+/* Prevent layout shift in Chrome/Edge when modals open */
+body.modal-open {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0px);
+}
+
+
+/* Stronger focus for accessibility */
+button:focus-visible {
+  outline: 3px solid var(--color-red);
+  outline-offset: 2px;
+  border-radius: 9999px;
+}
+
+/* Product card hover lift */
+div.bg-white:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Quantity buttons */
+button[aria-label*="quantity"]:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+button[aria-label*="quantity"]:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
