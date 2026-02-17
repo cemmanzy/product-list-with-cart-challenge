@@ -46,7 +46,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add your GitHub repo link here](https://github.com/[yourusername]/product-list-with-cart)
+- Solution URL:https://github.com/cemmanzy/product-list-with-cart-challenge
 - Live Site URL: [Add your Vercel/Netlify live link here](https://your-project-name.vercel.app)
 
 ## My process
