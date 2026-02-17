@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/cemmanzy/product-list-with-cart-challenge
-- Live Site URL: https://product-list-with-cart-challenge-made-by-emmanzy-hqepkyrfb.vercel.app/
+- Live Site URL: https://product-list-with-cart-challenge-ma.vercel.app/
 
 ## My process
 
